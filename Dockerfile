@@ -6,4 +6,4 @@ RUN apk --update add boost-dev git && \
 RUN \
     echo -e '#!/bin/sh\ncd /tmp\nporosity "$@"' > /usr/bin/_porosity && \
     chmod +x /usr/bin/_porosity
-ENTRYPOINT _porosity
+ENTRYPOINT ["/usr/bin/_porosity"]
